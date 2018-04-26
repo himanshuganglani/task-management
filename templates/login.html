@@ -1,0 +1,13 @@
+<HTML>
+<HEADER>
+    <TITLE>Login</TITLE>
+</HEADER>
+<BODY>
+<form method="Post" action="">
+     {% csrf_token %} {{ form.as_p }}
+        <button type="submit">Submit</button>
+        <br/>
+    <button><a href="{%url 'taskgroup:register' %} ">Register</a></button>
+</form>
+</BODY>
+</HTML>

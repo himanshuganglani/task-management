@@ -1,0 +1,31 @@
+<h1 > Task List </h1>
+	
+	<h2> welcome to
+	{% for item in User_Data %} 
+	{{User.email}}</h2>
+{% endfor %}
+<ul>
+
+	<table border="1">
+	<th>Name</th>
+	<th>Status</th>
+	<th>Starttime</th>
+	<th>Deadline</th>
+	<th>Delete</th>
+    {% for item in  records %}
+    <tr> 
+  
+    <td>{{item.Name}} </td> 
+    <td> {{item.Status}}</td>
+    <td>{{item.StartTime}}</td>
+    <td>{{item.EndTime}}</td>
+    <td><button ><a href="{% url 'taskgroup:deletetask' item.id %}"  > Delete Task</a>
+	</button>
+</td>
+</tr>
+    {% endfor %}</table>
+</ul>
+
+
+
+<a href="{% url 'taskgroup:createtask' %} " >click for Creating new task </a>

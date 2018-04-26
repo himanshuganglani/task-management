@@ -1,0 +1,21 @@
+<html>
+<head>
+
+<title>Task Create</title>
+
+</head>
+<body>
+	
+	{% block content%}
+	<form method="POST">
+	{% csrf_token %}
+	
+ {{ form.as_p }}
+	<button type="submit">Submit</button><br/>
+<button ><a href="{%url 'taskgroup:createtask'  %} ">Add More</a> </button>
+<br/>
+	
+	</form>
+</body>
+{% endblock %}
+</html>
